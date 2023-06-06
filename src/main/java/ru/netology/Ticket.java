@@ -43,7 +43,11 @@ public class Ticket implements Comparable<Ticket> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ticket ticket = (Ticket) o;
-        return price == ticket.price && timeFrom == ticket.timeFrom && timeTo == ticket.timeTo && from.equals(ticket.from) && to.equals(ticket.to);
+        return price == ticket.price
+                && timeFrom == ticket.timeFrom
+                && timeTo == ticket.timeTo
+                && from.equals(ticket.from)
+                && to.equals(ticket.to);
     }
 
     @Override
@@ -55,4 +59,6 @@ public class Ticket implements Comparable<Ticket> {
     public int compareTo(Ticket o) {
         return price - o.price;
     }
+
+
 }
